@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة صاحبة الصالون</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🔥 Fireplace</h1>
+    <p>مرحباً صاحبة صالون جودة الأظافر ✨👑</p>
+    <nav>
+      <a href="index.html">الحجوزات</a>
+      <a href="employee.html">الموظفات</a>
+      <a href="admin.html">مدير المنصة</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>تسجيل الدخول</h2>
+      <form id="loginForm">
+        <label>
+          البريد الإلكتروني
+          <input type="email" id="email" required>
+        </label>
+        <label>
+          كلمة المرور
+          <input type="password" id="password" required>
+        </label>
+        <button type="submit">دخول</button>
+        <button type="button" id="logoutButton">تسجيل الخروج</button>
+      </form>
+      <p id="loginMessage"></p>
+    </section>
+
+    <section class="card">
+      <h2>إدارة الصالون</h2>
+      <div class="grid">
+        <button onclick="location.href='#appointments'">الحجوزات</button>
+        <button onclick="location.href='#services'">الخدمات والأسعار</button>
+        <button onclick="location.href='#finance'">الماليات</button>
+        <button onclick="location.href='#fireplace'">الفاير بليس 🔥</button>
+      </div>
+    </section>
+
+    <section class="card" id="appointments">
+      <h2>الحجوزات</h2>
+      <div id="appointmentsList">سجلي الدخول لعرض الحجوزات.</div>
+    </section>
+
+    <section class="card" id="services">
+      <h2>الخدمات والأسعار</h2>
+      <div id="servicesList"></div>
+    </section>
+
+    <section class="card" id="finance">
+      <h2>الماليات</h2>
+      <div id="financeSummary">تظهر البيانات بعد تسجيل الدخول.</div>
+    </section>
+
+    <section class="card" id="fireplace">
+      <h2>🔥 Fireplace Data Vault</h2>
+      <p>إنشاء نسخة احتياطية من بيانات الصالون وحفظها على جهازك.</p>
+      <button id="backupButton">إنشاء نسخة احتياطية</button>
+      <p id="backupMessage"></p>
+    </section>
+  </main>
+
+  <script type="module" src="owner.js"></script>
+</body>
+</html>
