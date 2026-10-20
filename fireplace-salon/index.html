@@ -1,1 +1,75 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صالون جودة الأظافر</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✨ صالون جودة الأظافر</h1>
+    <nav>
+      <a href="index.html">الحجز</a>
+      <a href="owner.html">لوحة الإدارة</a>
+      <a href="employee.html">الموظفات</a>
+      <a href="admin.html">مدير المنصة</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>جمالك يبدأ من موعدك 💅</h2>
+      <p>اختاري خدمتك وموعدك والموظفة المفضلة.</p>
+    </section>
+
+    <section class="card">
+      <h2>احجزي موعدك</h2>
+
+      <form id="bookingForm">
+        <label>
+          الاسم
+          <input id="customerName" required maxlength="100">
+        </label>
+
+        <label>
+          رقم الجوال
+          <input id="phone" required type="tel" maxlength="25">
+        </label>
+
+        <label>
+          الخدمة
+          <select id="service" required>
+            <option value="">اختاري الخدمة</option>
+            <option value="مانيكير">مانيكير</option>
+            <option value="بديكير">بديكير</option>
+            <option value="تركيب أظافر">تركيب أظافر</option>
+          </select>
+        </label>
+
+        <label>
+          الموظفة المفضلة
+          <input id="employee" placeholder="اسم الموظفة">
+        </label>
+
+        <label>
+          تاريخ الموعد
+          <input id="date" type="date" required>
+        </label>
+
+        <label>
+          وقت الموعد
+          <input id="time" type="time" required>
+        </label>
+
+        <button type="submit">إرسال طلب الحجز</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+  </main>
+
+  <script type="module" src="booking.js"></script>
+</body>
+</html>
